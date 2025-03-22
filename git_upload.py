@@ -8,7 +8,9 @@ GITHUB_TOKEN =  st.secrets["git_token"]   # 개인 액세스 토큰 입력
 BRANCH = "main"  # 사용할 브랜치
 
 st.title("사무행정(ACESS) 실습 자료 제출")
-st.write("제출파일이름:학번이름_고유명_날짜  예)30109김경복_출제유형1_250329.accdb")
+st.write("제출 파일 이름 규칙:학번이름_고유명_날짜")
+st.write("예)30109김경복_출제유형1_250329.accdb")
+st.write()
 # 파일 업로드
 uploaded_file = st.file_uploader("파일을 업로드하세요")
 
