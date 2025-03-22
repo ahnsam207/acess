@@ -8,14 +8,13 @@ GITHUB_TOKEN =  st.secrets["git_token"]   # 개인 액세스 토큰 입력
 BRANCH = "main"  # 사용할 브랜치
 
 st.title("사무행정(ACESS) 실습 자료 제출")
-st.write("제출파일이름:학번이름_고유명_날짜")
-st.write("예)30109김경복_출제유형1_250329.accdb") 
+st.write("제출파일이름:학번이름_고유명_날짜  예)30109김경복_출제유형1_250329.accdb")
 # 파일 업로드
 uploaded_file = st.file_uploader("파일을 업로드하세요")
 
 if uploaded_file is not None:
     file_content = uploaded_file.getvalue()
-    file_path = f"upload/class5/{uploaded_file.name}"
+    file_path = f"upload/{uploaded_file.name}"
 
     # GitHub API URL
     url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{file_path}"
